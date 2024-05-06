@@ -35,49 +35,49 @@ int main() {
     printf("                ***\n");
     printf("                 **\n");
     printf("                  *\n");
-    printf("½Ğ¿é¤J±K½X: \n");// ¨BÆJ1¡G¿é¤J±K½X
+    printf("è«‹è¼¸å…¥å¯†ç¢¼: \n");// æ­¥é©Ÿ1ï¼šè¼¸å…¥å¯†ç¢¼
 
     do {
         scanf("%d", &input);
         attempts++;
 
         if (input == password) {
-            printf("±K½X¥¿½T!\n");
+            printf("å¯†ç¢¼æ­£ç¢º!\n");
             break;
         } else {
-            printf("±K½X¿ù»~,ÁÙ¦³%d¦¸¾÷·|\n",attempts);
+            printf("å¯†ç¢¼éŒ¯èª¤,é‚„æœ‰%dæ¬¡æ©Ÿæœƒ\n",attempts);
         }
 
         if (attempts == 3) {
-            printf("¦¸¼Æ¥ÎºÉ,µ{¦¡§Y±Nµ²§ô\n");
+            printf("æ¬¡æ•¸ç”¨ç›¡,ç¨‹å¼å³å°‡çµæŸ\n");
             return 0;
         }
     } while (1);
 
     while (1) {
-        // ¨BÆJ2¡GÅã¥Ü¥D¿ï³æ
+        // æ­¥é©Ÿ2ï¼šé¡¯ç¤ºä¸»é¸å–®
         system("cls");
         // system("cls"); // Windows
 
         printf("--------------------------\n");
-        printf("->  a. µe¥Xª½¨¤¤T¨¤§Î     \n");
-        printf("->  b. Åã¥Ü­¼ªkªí         \n");
-        printf("->  c. µ²§ô               \n");
+        printf("->  a. ç•«å‡ºç›´è§’ä¸‰è§’å½¢     \n");
+        printf("->  b. é¡¯ç¤ºä¹˜æ³•è¡¨         \n");
+        printf("->  c. çµæŸ               \n");
         printf("--------------------------\n");
 
         char choice;
         scanf(" %c", &choice);
 
         if (choice == 'a' || choice == 'A') {
-            // ¨BÆJ3¡G¿é¤J¦r¤¸Åã¥Üª½¨¤¤T¨¤§Î
+            // æ­¥é©Ÿ3ï¼šè¼¸å…¥å­—å…ƒé¡¯ç¤ºç›´è§’ä¸‰è§’å½¢
             system("cls");
             // system("cls"); // Windows
 
-            printf("½Ğ¿é¤Ja¨ìn¤§¶¡ªº¦r¤¸:\n");
+            printf("è«‹è¼¸å…¥aåˆ°nä¹‹é–“çš„å­—å…ƒ:\n");
             scanf(" %c", &charInput);
 
             if (charInput < 'a' || charInput > 'n') {
-                printf("¿é¤J¿ù»~,½Ğ¿é¤Ja¨ìn¤§¶¡ªº¦r¤¸\n");
+                printf("è¼¸å…¥éŒ¯èª¤,è«‹è¼¸å…¥aåˆ°nä¹‹é–“çš„å­—å…ƒ\n");
                 getch();
                 scanf(" %c", &charInput);
             }
@@ -92,19 +92,19 @@ int main() {
                 printf("\n");
             }
 
-            printf("\n«ö¤U¥ô¦óÁä¥Hªğ¦^¥D¿ï³æ\n");
-            getch(); // µ¥«İ¨Ï¥ÎªÌ«ö¤U¥ô·NÁä
+            printf("\næŒ‰ä¸‹ä»»ä½•éµä»¥è¿”å›ä¸»é¸å–®\n");
+            getch(); // ç­‰å¾…ä½¿ç”¨è€…æŒ‰ä¸‹ä»»æ„éµ
         } else if (choice == 'b' || choice == 'B') {
-            // ¨BÆJ4¡G¿é¤J¾ã¼ÆnÅã¥Ü­¼ªkªí
+            // æ­¥é©Ÿ4ï¼šè¼¸å…¥æ•´æ•¸né¡¯ç¤ºä¹˜æ³•è¡¨
             system("cls");
             // system("cls"); // Windows
 
             int n;
-            printf("½Ğ¿é¤J1¨ì9¤§¶¡ªº¾ã¼Æ:\n");
+            printf("è«‹è¼¸å…¥1åˆ°9ä¹‹é–“çš„æ•´æ•¸:\n");
             scanf("%d", &n);
 
             if (n < 1 || n > 9) {
-                printf("¿é¤J¿ù»~,½Ğ¿é¤J1¨ì9¤§¶¡ªº¾ã¼Æ\n");
+                printf("è¼¸å…¥éŒ¯èª¤,è«‹è¼¸å…¥1åˆ°9ä¹‹é–“çš„æ•´æ•¸\n");
                 getch();
                 scanf("%d", &n);
             }
@@ -117,28 +117,28 @@ int main() {
                 printf("\n");
             }
 
-            printf("\n«ö¤U¥ô¦óÁä¥Hªğ¦^¥D¿ï³æ\n");
-            getch(); // µ¥«İ¨Ï¥ÎªÌ«ö¤U¥ô·NÁä
+            printf("\næŒ‰ä¸‹ä»»ä½•éµä»¥è¿”å›ä¸»é¸å–®\n");
+            getch(); // ç­‰å¾…ä½¿ç”¨è€…æŒ‰ä¸‹ä»»æ„éµ
         } else if (choice == 'c' || choice == 'C') {
-            // ¨BÆJ5¡G¸ß°İ¬O§_Ä~Äò
+            // æ­¥é©Ÿ5ï¼šè©¢å•æ˜¯å¦ç¹¼çºŒ
             system("cls");
             // system("cls"); // Windows
 
-            printf("¬O§_­nÄ~Äòµ{¦¡? (y/n)\n");
+            printf("æ˜¯å¦è¦ç¹¼çºŒç¨‹å¼? (y/n)\n");
             scanf(" %c", &charInput);
 
             if (charInput == 'y' || charInput == 'Y') {
-                continue; // ¦^¨ì¥D¿ï³æ
+                continue; // å›åˆ°ä¸»é¸å–®
             } else if (charInput == 'n' || charInput == 'N') {
-                printf("µ²§ôµ{¦¡\n");
-                break; // µ²§ôµ{¦¡
+                printf("çµæŸç¨‹å¼\n");
+                break; // çµæŸç¨‹å¼
             } else {
-                printf("¿é¤J¿ù»~,½Ğ¿é¤Jy©În\n");
+                printf("è¼¸å…¥éŒ¯èª¤,è«‹è¼¸å…¥yæˆ–n\n");
                 getch();
                 continue;
             }
         } else {
-            printf("¿é¤J¿ù»~,½Ğ¿é¤Ja©Îb©Îc\n");
+            printf("è¼¸å…¥éŒ¯èª¤,è«‹è¼¸å…¥aæˆ–bæˆ–c\n");
             getch();
         }
     }
