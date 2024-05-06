@@ -1,0 +1,133 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+void clear_screen() {
+    system("cls");
+}
+
+//顯示主選單
+void display_menu() {
+    printf("--------------------------\n");
+    printf("|  a. 畫出直角三角形 |\n");
+    printf("|  b. 顯示乘法表 |\n");
+    printf("|  c. 結束 |\n");
+    printf("--------------------------\n");
+}
+
+//畫出直角三角形
+void draw_triangle(char ch) {
+    int i, j;
+    if(ch < 'a' || ch > 'n') {
+        printf("無效輸入。請輸入介於 'a' 到 'n' 之間的字元。\n");
+        return;
+    }
+    for(i = 0; i <= ch - 'a'; i++) {
+        for(j = 0; j <= i; j++) {
+            printf("%c ", ch);
+        }
+        printf("\n");
+    }
+}
+
+// 顯示乘法表
+void display_multiplication_table(int n) {
+    int i, j;
+    if(n < 1 || n > 9) {
+        printf("無效輸入。請輸入介於 1 到 9 之間的數字。\n");
+        return;
+    }
+    for(i = 1; i <= n; i++) {
+        for(j = 1; j <= n; j++) {
+            printf("%2d ", i * j);
+        }
+        printf("\n");
+    }
+}
+
+int main() {
+    // 打印樹幹和樹冠會變成樹屋
+    printf("       *\n");
+    printf("      /|\\\n");
+    printf("     /_|_\\\n");
+    printf("    /__|__\\\n");
+    printf("   /___|___\\\n");
+    printf("     / | \\\n");
+    printf("    /  |  \\\n");
+    printf("   /   |   \\\n");
+    printf("  /____|____\\\n");
+    printf("   |   |   |\n");
+    printf("   |   |   |\n");
+    printf("   |___|___|\n");
+    printf("     |||||\n");
+    printf("   ~~~~~~~~\n");
+    // 印出一些個人風格的訊息
+    printf("\n歡迎來到我的樹屋！\n");
+//清除畫面
+ char password[5] = "2024"; //設定密碼 
+    char input_password[5];
+    int attempts = 0;
+    char choice;
+    int num;
+
+    // 步驟 1：輸入密碼
+    while(attempts < 3) {
+        printf("請輸入密碼：");
+        scanf("%s", input_password);
+        if(strcmp(password, input_password) == 0) {
+            break;
+        } else {
+            attempts++;
+            printf("密碼錯誤。剩餘嘗試次數：%d\n", 3 - attempts);
+            if(attempts == 3) {
+                printf("錯誤次數過多。程式即將退出...\n");
+                return 0;
+            }
+        }
+    }
+
+    // 步驟 2：顯示主選單
+    while(1) {
+         clear_screen();
+        display_menu();
+        printf("請選擇：");
+        scanf(" %c", &choice);
+        switch(choice) {
+            case 'a':
+                clear_screen();
+                printf("請輸入介於 'a' 到 'n' 之間的字元：");
+                scanf(" %c", &choice);
+                draw_triangle(choice);
+                getchar(); // 清除輸入緩衝區
+                printf("按下任意鍵返回主選單...");
+                getchar();
+                break;
+            case 'b':
+                 clear_screen();
+                printf("請輸入介於 1 到 9 之間的數字：");
+                scanf("%d", &num);
+                display_multiplication_table(num);
+                getchar(); // 清除輸入緩衝區
+                printf("按下任意鍵返回主選單...");
+                getchar();
+                break;
+            case 'c':
+                clear_screen();
+                printf("繼續嗎？(y/n)：");
+                scanf(" %c", &choice);
+                if(choice == 'y' || choice == 'Y') {
+                    break;
+                } else if(choice == 'n' || choice == 'N') {
+                    printf("退出程式...\n");
+                    return 0;
+                } else {
+                    printf("無效選擇。請輸入 'y' 或 'n'。\n");
+                    break;
+                }
+            default:
+                printf("無效選擇。請輸入 'a'、'b' 或 'c'。\n");
+                break;
+        }
+    }
+
+    return 0;
+}
