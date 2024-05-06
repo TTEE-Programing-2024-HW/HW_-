@@ -3,6 +3,14 @@
 int face(void);
 int thain(void);
 int ninetonine(void);
+
+//This program is written using the subprogram method, 
+//which separates the main program and content to facilitate reading and writing of the program.
+
+
+
+
+
 int main(void)
 {
 	int counter=0;
